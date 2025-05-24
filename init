@@ -110,3 +110,6 @@ launchHandoff() {
 detectHandoff
 runServices "$services"
 launchHandoff "$nextHandoff"
+log "${COLOR_RED_B}ERROR${COLOR_RESET}" "Failed to start handoff! Bailing out."
+echo "This shell has PID 1. Exit = panic."
+exec /bin/sh
